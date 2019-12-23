@@ -124,3 +124,49 @@ server {
   }
 }
 ```
+
+如果使用subdir，有以下配置改动：
+对于``vhost.nginx.config``
+```
+  location /subdir/ {
+    proxy_pass https://127.0.0.1:8443;
+  }
+```
+对于``config.js``
+```
+https.domain = 'https://tgbot.your.domain/subdir/' // 域名
+```
+对于``server.js``
+```
+……
+app.post('/subdir/inlineQuery', (req, resp) => {
+//app.post('/inlineQuery', (req, resp) => {
+    if (req.body.message.text && req.body.message.text === '/start') {
+        ……
+    resp.send('hello')
+})
+……
+
+app.get('/subdir/sendMessage/:token', (req, resp) => {
+//app.get('/sendMessage/:token', (req, resp) => {
+……
+})
+app.get('/subdir/test', (req, resp) => {
+//app.get('/test', (req, resp) => {
+……
+})
+app.get('/subdir/redirectTo', (req, resp) => {
+//app.get('/redirectTo', (req, resp) => {
+……
+})
+app.get('/subdir/rulesets/smart/', (req, resp) => {
+//app.get('/rulesets/smart/', (req, resp) => {
+……
+})
+app.post('/subdir/rulesets/update/', (req, resp) => {
+//app.post('/rulesets/update/', (req, resp) => {
+……
+})
+……
+
+```
