@@ -55,6 +55,7 @@ module.exports = {
 2. 执行``npm install``安装依赖（与``package.json``同目录下）
 3. 执行``npm install -g pm2``安装pm2模块
 4. 执行``pm2 start server.js``启动服务端
+tips：若有error,可以尝试使用cnpm进行安装
 
 ### 设置Bot webhook地址
 
@@ -63,7 +64,29 @@ module.exports = {
 检查webhook是否正常 https://api.telegram.org/bot{token}/getWebhookInfo
 
 ### 使用Nginx反向代理(不占用443端口)
+
+
 1. 修改server.js的197端口为8443
+将以下代码注释
+```
+const httpsServer = https.createServer({
+    key: privateKey,
+    cert: certificate
+}, app)
+```
+注释后
+```
+//const httpsServer = https.createServer({
+//    key: privateKey,
+//    cert: certificate
+//}, app)
+```
+修改监听配置
+```
+//httpsServer.listen(8443, config.https.domain, () => {
+app.listen(8443,() => {
+```
+
 2. 执行``pm2 restart server.js``重启服务端
 3. 创建nginx server配置
 ```
