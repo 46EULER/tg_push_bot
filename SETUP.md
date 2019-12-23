@@ -55,6 +55,7 @@ module.exports = {
 2. 执行``npm install``安装依赖（与``package.json``同目录下）
 3. 执行``npm install -g pm2``安装pm2模块
 4. 执行``pm2 start server.js``启动服务端
+
 tips：若有error,可以尝试使用cnpm进行安装
 
 ### 设置Bot webhook地址
