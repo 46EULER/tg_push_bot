@@ -12,7 +12,7 @@ Forked from [Fndroid/tg_push_bot](https://github.com/Fndroid/tg_push_bot)
 ### 推送消息
 
 
-[Nodejs及Python示例](master/examples)
+[Nodejs及Python示例](tree/master/examples)
 
 ```
 // using get
