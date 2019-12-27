@@ -19,7 +19,7 @@ Forked from [Fndroid/tg_push_bot](https://github.com/Fndroid/tg_push_bot)
 curl -X GET https://tgmsgbot.begabung.site/notifyME/sendMessage/:Token?text=HelloWorld
 
 // using post
-curl -d "text=Helloworld&photo=https%3A%2F%2Fgithub.com%2FFndroid%2Ftg_push_bot%2Fblob%2Fmaster%2Fimgs%2Fphoto_2018-04-21_15-29-55.jpg%3Fraw%3Dtrue" -X POST https://tgmsgbot.begabung.site/notifyME/sendMessage/:Token
+curl -d "text=Helloworld&photo=https%3A%2F%2Fgithub.com%2F46EULER%2Ftg_push_bot%2Fblob%2Fmaster%2Fimgs%2Fphoto_2018-04-21_15-29-55.jpg%3Fraw%3Dtrue" -X POST https://tgmsgbot.begabung.site/notifyME/sendMessage/:Token
 ```
 
 
