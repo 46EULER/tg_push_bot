@@ -1,7 +1,8 @@
 # Telegram Push Notifications Bot Update Log
 TG推送机器人更新日志
+Forked from [Fndroid/tg_push_bot](https://github.com/Fndroid/tg_push_bot)
 
-[点我添加Bot](https://t.me/notificationme_bot) 
+[点我添加Bot](https://t.me/begabung_bot) 
 
 [在VPS/ECS上搭建Bot Server](SETUP.md)
 
@@ -10,14 +11,14 @@ TG推送机器人更新日志
 ### 推送消息
 
 
-[Nodejs及Python示例](https://github.com/Fndroid/tg_push_bot/tree/master/examples)
+[Nodejs及Python示例](master/examples)
 
 ```
 // using get
-curl -X GET https://tgbot.lbyczf.com/sendMessage/:Token?text=HelloWorld
+curl -X GET https://tgmsgbot.begabung.site/notifyME/sendMessage/:Token?text=HelloWorld
 
 // using post
-curl -d "text=Helloworld&photo=https%3A%2F%2Fgithub.com%2FFndroid%2Ftg_push_bot%2Fblob%2Fmaster%2Fimgs%2Fphoto_2018-04-21_15-29-55.jpg%3Fraw%3Dtrue" -X POST https://tgbot.lbyczf.com/sendMessage/:Token
+curl -d "text=Helloworld&photo=https%3A%2F%2Fgithub.com%2FFndroid%2Ftg_push_bot%2Fblob%2Fmaster%2Fimgs%2Fphoto_2018-04-21_15-29-55.jpg%3Fraw%3Dtrue" -X POST https://tgmsgbot.begabung.site/notifyME/sendMessage/:Token
 ```
 
 
@@ -73,4 +74,4 @@ Bot不会识别和储存任何用户推送的消息，只会将推送消息发�
 
 
 ### 感谢支持
-![感谢](https://raw.githubusercontent.com/Fndroid/jsbox_script/master/imgs/thankyou.jpg)
+![感谢](https://github.com/Fndroid/tg_push_bot)
