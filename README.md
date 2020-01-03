@@ -1,6 +1,7 @@
 # Telegram Push Notifications Bot Update Log
 TG推送机器人更新日志
 
+
 Forked from [Fndroid/tg_push_bot](https://github.com/Fndroid/tg_push_bot)
 
 [点我添加Bot](https://t.me/begabung_bot) 
