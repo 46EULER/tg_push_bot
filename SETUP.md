@@ -7,7 +7,7 @@
 ### 下载/Clone仓库代码
 
 ```
-git clone https://github.com/Fndroid/tg_push_bot.git
+git clone https://github.com/46EULER/tg_push_bot.git
 
 cd tg_push_bot
 ```
