@@ -97,6 +97,33 @@ let removeUid = function(uid) {
     })
 }
 
+let genUUIDupperCase = function uuidU() {
+    var s = [];
+    var hexDigits = "0123456789ABCDEF";
+    for (var i = 0; i < 36; i++) {
+        s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+    }
+    s[14] = "4";  // bits 12-15 of the time_hi_and_version field to 0010
+    s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);  // bits 6-7 of the clock_seq_hi_and_reserved to 01
+    s[8] = s[13] = s[18] = s[23] = "-";
+
+    var uuidU = s.join("");
+    return uuidU;
+}
+let genUUIDlowerCase = function uuidL() {
+    var s = [];
+    var hexDigits = "0123456789abcdef";
+    for (var i = 0; i < 36; i++) {
+        s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+    }
+    s[14] = "4";  // bits 12-15 of the time_hi_and_version field to 0010
+    s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);  // bits 6-7 of the clock_seq_hi_and_reserved to 01
+    s[8] = s[13] = s[18] = s[23] = "-";
+
+    var uuidL = s.join("");
+    return uuidL;
+}
+
 app.post('/inlineQuery', (req, resp) => {
     if (req.body.message.text && req.body.message.text === '/start') {
         let uid = req.body.message.chat.id
@@ -121,6 +148,11 @@ app.post('/inlineQuery', (req, resp) => {
         }).catch(() => {
             sendResponse(uid, config.ui.errorHint)
         })
+    }
+    if (req.body.message.text && req.body.message.text === 'UUID') {
+        sendResponse(uid, genUUIDupperCase(), 'Markdown', undefined, true)
+    } else if (req.body.message.text && req.body.message.text === 'uuid') {
+        sendResponse(uid, genUUIDlowerCase(), 'Markdown', undefined, true)
     }
     resp.send('hello')
 })
