@@ -46,6 +46,9 @@ disable_notification|Boolean|False|控制是否发送通知
 Bot不会识别和储存任何用户推送的消息，只会将推送消息发送给Telegram服务器。Bot只会记录用户回话ID，此ID是向Telegram推送消息的凭据。
 
 ### 更新日志
+#### 2020.05.08
+1. 增加uuid生成功能，向机器人发送‘UUID’可返回一串uuid。
+~~2. 发送“/help”可返回简略的提示~~
 
 #### 2018.04.20
 
