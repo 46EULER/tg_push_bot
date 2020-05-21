@@ -1,19 +1,20 @@
-# Telegram Push Notifications Bot Update Log
-### TG推送机器人[更新日志](https://github.com/46EULER/tg_push_bot#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97)
+
+### TG推送机器人 Telegram Push Notifications Bot
+[更新日志 Update Log](https://github.com/46EULER/tg_push_bot#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97)
 
 
 Forked from [Fndroid/tg_push_bot](https://github.com/Fndroid/tg_push_bot)
 
-[点我添加Bot](https://t.me/begabung_bot) 
+[点我添加Bot --- Click here to add this bot to your telegram](https://t.me/begabung_bot) 
 
-[在VPS/ECS上搭建Bot Server](SETUP.md)
+[在VPS/ECS上搭建Bot Server --- Creat your own Bot Server](SETUP.md)
 
-[Chrome插件](https://github.com/Fndroid/tg_notification_chrome)
+[Chrome插件 --- Chrom Plugin](https://github.com/Fndroid/tg_notification_chrome)
 
-### 推送消息
+### 推送消息 Push Notifications
 
 
-[Nodejs及Python示例](https://github.com/46EULER/tg_push_bot/tree/master/examples)
+[Nodejs及Python示例 --- demo for Node.JS && Python](https://github.com/46EULER/tg_push_bot/tree/master/examples)
 
 ```
 // using get
@@ -25,30 +26,36 @@ curl -d "text=Helloworld&photo=https%3A%2F%2Fgithub.com%2F46EULER%2Ftg_push_bot%
 
 
 > GET调用的URL长度会有限制，所以如果要发送图片或者发送内容较长，请使用POST
+> 
+> Length of URL is limited by GET Method. POST Method is preferred if seding Picture or long text.
 
-### 字段解释
+### 字段解释 description of parameters
 
-参数|类型|必须|说明
+参数Param Name|类型Type|必须Must-use|说明Description
 -|-|-|-
-text|String|True|发送的文字内容
-photo|URL String|False|发送的图片地址，支持HTTPS/HTTP
-parse_mode|String|False|发送文字内容的样式，可以是Markdown或HTML
+text|String|True|发送的文字内容 --- Contained text
+photo|URL String|False|发送的图片地址，支持HTTPS/HTTP --- Pic url. HTTPS/HTTP prefix is supported
+parse_mode|String|False|发送文字内容的样式，可以是Markdown或HTML --- Type of contained text could be Markdown or HTML
 reply_markup|JSON String|False|用于控制消息底下的操作按钮
 disable_web_page_preview|Boolean|False|控制是否展示链接的卡片
-disable_notification|Boolean|False|控制是否发送通知
+disable_notification|Boolean|False|控制是否发送通知 --- Show device(Mac/iOS/Win etc.) notification or not.
 
 > reply_markup可以参考：[Telegram Bot API](https://core.telegram.org/bots/api#sendmessage)
 
 > 当photo存在时，text不必须存在（即可以单独发送图片）
 
-### 隐私相关
+### 隐私相关 Privicy
 
-Bot不会识别和储存任何用户推送的消息，只会将推送消息发送给Telegram服务器。Bot只会记录用户回话ID，此ID是向Telegram推送消息的凭据。
+Bot不会识别和储存任何用户推送的消息，只会将推送消息发送给Telegram服务器。Bot只会记录用户会话ID，此ID是向Telegram推送消息的凭据。
 
-### 更新日志
+This bot doesn't record or analysis any data pushed by end users. Messages received from user would be forword to Telegram Server directly.  Only ChatID is recorded while end user start using this bot. As you know, the ChatID is required by Telegram to push message correctly.
+
+### 更新日志 Update Log
 #### 2020.05.08
 1. 增加uuid生成功能，向机器人发送‘UUID’可返回一串uuid。
-~~2. 发送“/help”可返回简略的提示~~
+~~2. 发送“/help”可返回简略的提示~~function of creating uuid string is online.
+
+
 
 #### 2018.04.20
 
