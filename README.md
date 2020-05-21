@@ -1,5 +1,5 @@
 # Telegram Push Notifications Bot Update Log
-TG推送机器人更新日志
+### TG推送机器人[更新日志](https://github.com/46EULER/tg_push_bot#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97)
 
 
 Forked from [Fndroid/tg_push_bot](https://github.com/Fndroid/tg_push_bot)
