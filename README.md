@@ -35,7 +35,7 @@ curl -d "text=Helloworld&photo=https%3A%2F%2Fgithub.com%2F46EULER%2Ftg_push_bot%
 -|-|-|-
 text|String|True|发送的文字内容 --- Contained text
 photo|URL String|False|发送的图片地址，支持HTTPS/HTTP --- Pic url. HTTPS/HTTP prefix is supported
-parse_mode|String|False|发送文字内容的样式，可以是Markdown或HTML --- Type of contained text could be Markdown or HTML
+parse_mode|String|False|发送文字内容的样式，可以是MarkdownV2或HTML --- Type of contained text could be MarkdownV2 or HTML
 reply_markup|JSON String|False|用于控制消息底下的操作按钮
 disable_web_page_preview|Boolean|False|控制是否展示链接的卡片
 disable_notification|Boolean|False|控制是否发送通知 --- Show device(Mac/iOS/Win etc.) notification or not.

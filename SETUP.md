@@ -1,8 +1,9 @@
 ## 如何在ECS/VPS上搭建Bot Server
 
-### 获取Bot token
+### 获取Bot token  --- get Bot Token
 
 点击[@BotFather](https://telegram.me/BotFather)，按步骤创建自己的Bot获取Token
+Click [@BotFather](https://telegram.me/BotFather) and create your own Bot Token.
 
 ### 下载/Clone仓库代码
 
